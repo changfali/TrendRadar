@@ -2745,23 +2745,23 @@ def render_feishu_content(
     # 定义全局序号，用于热点词汇部分
     stats_global_index = 1
 
-    for stat in report_data["stats"]:
-        # 你注释掉的部分（词汇标题和统计）已被完全移除
-        # 这里直接遍历该词汇下的所有新闻标题
+    # for stat in report_data["stats"]:
+    #     # 你注释掉的部分（词汇标题和统计）已被完全移除
+    #     # 这里直接遍历该词汇下的所有新闻标题
 
-        for title_data in stat["titles"]:
-            # 必须显示来源(show_source=True)，因为现在没有分类标题了
-            formatted_title = format_title_for_platform(
-                "feishu", title_data, show_source=True
-            )
+    #     for title_data in stat["titles"]:
+    #         # 必须显示来源(show_source=True)，因为现在没有分类标题了
+    #         formatted_title = format_title_for_platform(
+    #             "feishu", title_data, show_source=True
+    #         )
             
-            # 使用全局序号
-            text_content += f"  {stats_global_index}. {formatted_title}\n"
+    #         # 使用全局序号
+    #         text_content += f"  {stats_global_index}. {formatted_title}\n"
             
-            # 序号递增
-            stats_global_index += 1
+    #         # 序号递增
+    #         stats_global_index += 1
         
-        # 移除了原来的 stat 分隔符逻辑，让列表看起来是一个整体
+    #     # 移除了原来的 stat 分隔符逻辑，让列表看起来是一个整体
 
     # ==========================================
     # 处理空数据提示
